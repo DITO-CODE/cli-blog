@@ -1,0 +1,126 @@
+/*Colocar el prefixo prefixNews para cada estilo ejemplo
+
+.prefixNews .estiloPropio{
+    color.....
+}
+
+*/
+
+.prefixNews .contenedor{
+    margin-top: 10px;
+    max-width: 940px;
+}
+
+.prefixNews .contenedorImages{
+    margin-top: 35px !important;
+}
+
+.prefixNews .imageThumbail{
+    width: 100% !important;
+    height: 260px !important;
+}
+
+.prefixNews .contendorThumb{
+    margin-top: 20px;
+}
+
+
+.prefixNews .btnThumb{
+    position: absolute
+}
+
+.prefixNews .recomendados{
+    margin-top: 20px;
+}
+
+.prefixNews .tituloRecomendado {
+    font-family: ArialMT;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0px;
+    color: #ff6f20;
+}
+
+
+.prefixNews .imgTitleAR{
+    background-image: url(../images/icon-articulo.png);
+    background-size: 23px 19px;
+    height: 19px;
+    width: 23px;
+    position: absolute;
+}
+
+.prefixNews .textoTituloR {
+    margin-left: 30px;
+}
+
+.prefixNews .slick-prev{
+    background-image: url('../images/previous-button.png') !important;
+    background-size: 40px 40px;
+}
+
+.prefixNews .tituloSlider{
+    font-family: ArialMT !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: -0px !important;
+    color: #ff6f20 !important;
+}
+
+.prefixNews .thumSlider{
+
+    max-width: 200px;
+}
+
+.contenidoSlider{
+    color:#183d7b !important;
+    font-family: ArialMT !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: -0px !important;
+}
+
+.prefixNews .tituloSliderArticulo{
+    font-family: ArialMT !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: -0px !important;
+    color: #ff6f20 !important;
+    cursor: pointer;
+}
+
+.prefixNews .imagenesSelect{
+    cursor: pointer;
+}
+
+.prefixNews .newsletter{
+    background: #6666660d;
+}
+
+.prefixNews .tituloNewsletter{
+    font-family: Arial;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.32;
+    letter-spacing: normal;
+    color: #183d7b;
+    text-align: center;
+}
+
+.prefixNews .selectMes{
+    cursor: pointer;
+}
