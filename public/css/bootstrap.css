@@ -1355,6 +1355,7 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    color: transparent;
 }
 
 .prefixNews a {
@@ -3518,9 +3519,21 @@
 }
 
 .prefixNews .btn-success {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+
+    width: 138px !important;
+    height: 35px !important;
+    border-radius: 4px !important;
+    background-color: #ff6f20 !important;
+    font-family: Arial !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    letter-spacing: 1.2px !important;
+    color: #ffffff !important;
+    margin-top: 10px !important;
+    margin-left: 35% !important;
 }
 
 .prefixNews .btn-success:focus, .prefixNews .btn-success.focus {
@@ -7121,6 +7134,7 @@
 
 .prefixNews .carousel-inner > .item > img, .prefixNews .carousel-inner > .item > a > img {
     line-height: 1;
+    height: 365px;
 }
 
 .prefixNews .carousel-inner > .active, .prefixNews .carousel-inner > .next, .prefixNews .carousel-inner > .prev {
@@ -7318,10 +7332,10 @@
         font-size: 30px;
     }
     .prefixNews .carousel-control .glyphicon-chevron-left, .prefixNews .carousel-control .icon-prev {
-        margin-left: -10px;
+        margin-left: -57px;
     }
     .prefixNews .carousel-control .glyphicon-chevron-right, .prefixNews .carousel-control .icon-next {
-        margin-right: -10px;
+        margin-right: -57px;
     }
     .prefixNews .carousel-caption {
         right: 20%;

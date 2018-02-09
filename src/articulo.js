@@ -11,7 +11,9 @@ class Articulo extends Component {
                 </div>
 
                 <div className="col-md-8 col-sm-12 col-xs-12">
+                <div className="articulo">
                     <div className="col-md-12">
+                    
                         <img width={610} height={469} alt="893x365" src={this.props.articulo.contenido.imgUrl} />
                     </div>
                     <div className="col-md-12 contenidos">
@@ -22,6 +24,7 @@ class Articulo extends Component {
                                              dangerouslySetInnerHTML={{__html:this.props.articulo.contenido.texto}} />
                     </div>
                 </div> 
+                </div>
                 <div className="col-md-4 col-sm-12 col-xs-12">
                     {
                         this.props.contenidos ? 

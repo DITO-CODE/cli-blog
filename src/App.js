@@ -82,17 +82,18 @@ class App extends Component {
 {this.state.contenidos && this.state.contenidosPreferidos && this.state.banners ? 
         <div className="col-md-12 newsletter">
           <div className="col-md-6">
-            <label className="tituloNewsletter">Suscríbete a nuestro Newsletter</label>
+            <label className="tituloNewslettersuscribete">Suscríbete a nuestro Newsletter</label>
             <label className="aplicar">Deseas recibir nuestras últimas noticias del portal. Recibe en tu correo electrónico todas nuestras notas.</label>
             <input className="from-control" placeholder="Nombre" />
             <input className="from-control" placeholder="Correo electrónico" />
-            <p>El tratamiento de sus datos personales se realiza conforme a nuestro aviso de privacidad. ¡Consúltalo!</p>
+            <p className="leyendaSuscripcion">El tratamiento de sus datos personales se realiza conforme a nuestro aviso de privacidad. ¡Consúltalo!</p>
             <button className="btn btn-success">SUSCRIBIRME</button>
           </div>
 
           <div className="col-md-6">
-            <label className="tituloNewsletter">Publicaciones Anteriores </label>
-            <select onChange={this.setAnio.bind(this)}>
+            <label className="tituloNewsletterpublicaciones">Publicaciones Anteriores </label>
+           
+            <select className="anios" onChange={this.setAnio.bind(this)}>
               {
                 this.state.anios ?
                   this.state.anios.map((value,index)=>{
@@ -102,19 +103,19 @@ class App extends Component {
                   }) : null
               }
             </select>
-            <Slider {...this.state.settings}>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"01")}>ENERO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"02")}>FEBRERO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"03")}>MARZO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"04")}>ABRIL</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"05")}>MAYO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"06")}>JUNIO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"07")}>JULIO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"08")}>AGOSTO</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"09")}>SEPTIEMBRE</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"10")}>OCTUBRE</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"11")}>NOVIEMBRE</label></div>
-                    <div><label className="selectMes" onClick={this.setMes.bind(this,"12")}>DICIEMBRE</label></div>
+            <Slider {...this.state.settings} className="meses">
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"01")}>Enero</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"02")}>Febrero</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"03")}>Marzo</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"04")}>Abril</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"05")}>Mayo</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"06")}>Junio</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"07")}>Julio</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"08")}>Agosto</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"09")}>Septiembre</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"10")}>Octubre</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"11")}>Noviembre</label></div>
+                    <div><label className="selectMes" onClick={this.setMes.bind(this,"12")}>Diciembre</label></div>
                 </Slider>
 
                 <div className="col-md-12">
@@ -125,6 +126,7 @@ class App extends Component {
                     
                       this.state.contenidosFecha.map((element,index) => {
                         return (<div>
+                          
                           <img width={190} height={85} alt="893x365" className="imagenesSelect"
                                 onClick={this.selectArticulo.bind(this,element.id)}
                                 src={element.data.contenido.imgUrl} />
@@ -227,7 +229,7 @@ class App extends Component {
   }
 
   selectArticulo(idArticulo,event){
-    debugger;
+   
     axios.post(`${path}/contenidos/getContenido`,{
       id:idArticulo
     })
