@@ -5,6 +5,40 @@ import Slider from 'react-slick';
 import Inicio from './inicio';
 import axios from 'axios';
 
+var sliderTwoRows = {
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  }
+
 const path="https://us-central1-proyectosgtec-8de9b.cloudfunctions.net";
 
 class App extends Component {
@@ -121,19 +155,30 @@ class App extends Component {
                 <div className="col-md-12">
                 {
                   this.state.contenidosFecha ? 
-                  <Slider {...this.state.settings}>
+                  <Slider {...sliderTwoRows}>
                     {
                     
                       this.state.contenidosFecha.map((element,index) => {
-                        return (<div>
-                          
+                        console.log( element + ": " + index );
+                        element = 1;
+                        console.log (element+1);
+                        return (
+                      <div>  
                           <img width={190} height={85} alt="893x365" className="imagenesSelect"
                                 onClick={this.selectArticulo.bind(this,element.id)}
                                 src={element.data.contenido.imgUrl} />
+                          <div className="col-md-6">
+                            {element.data.titulo}
+                          </div>
+                          <br/>
+                        <img width={190} height={85} alt="893x365" className="imagenesSelect"
+                                onClick={this.selectArticulo.bind(this,element.id)}
+                                src={element.data.contenido.imgUrl} />
                         <div className="col-md-6">
-                        {element.data.titulo}
+                          {element.data.titulo}
+                        </div>
                       </div>
-                      </div>)
+                      )
                       })
                     }
                   </Slider>
